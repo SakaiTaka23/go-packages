@@ -1,0 +1,22 @@
+basePath: /api/v1
+host: 127.0.0.1:8080
+info:
+  contact: {}
+  description: test of swag
+  title: example document
+  version: "1.0"
+paths:
+  /example/helloworld:
+    get:
+      description: do hello world
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: return helloworld
+      tags:
+      - greeting
+swagger: "2.0"
