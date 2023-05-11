@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  db:
+    container_name: db
+    image: mysql:8.0
+    platform: linux/x86_64
+    command: mysqld
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_DATABASE: example
+      TZ: 'Asia/Tokyo'
+    ports:
+      - 3306:3306
