@@ -5,6 +5,8 @@ import (
 	"gorm.io/gorm"
 )
 
+//go:generate mockgen -source=user_repo.go -destination=../mock/mock_user_repo.go -package=mock
+
 type UserRepo interface {
 	Create(name string) (string, error)
 	GetUser(id string) (model.User, error)
