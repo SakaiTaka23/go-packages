@@ -19,4 +19,6 @@ func main() {
 	cmd.CheckContainers(cli)
 	// stop container
 	cmd.StopAllContainer(cli)
+	// inspect container
+	cmd.Inspect(cli)
 }
