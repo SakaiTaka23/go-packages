@@ -29,7 +29,7 @@ func RunImage(cli *client.Client) {
 			"1880/tcp": []nat.PortBinding{
 				{
 					HostIP:   "127.0.0.1",
-					HostPort: "1880",
+					HostPort: "",
 				},
 			},
 		},
