@@ -50,4 +50,5 @@ func RunImage(cli *client.Client) {
 	}
 
 	fmt.Printf("created container: %s \n", resp.ID)
+	fmt.Printf("port: %s \n", resp.ID)
 }
