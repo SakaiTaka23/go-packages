@@ -2,10 +2,10 @@ package model
 
 // Album represents data about a record album.
 type Album struct {
-	ID     string  `json:"id"`
-	Title  string  `json:"title"`
-	Artist string  `json:"artist"`
-	Price  float64 `json:"price"`
+	ID     string  `json:"id" required:"true" minLength:"1" description:"ID is a unique string that determines album."`
+	Title  string  `json:"title" required:"true" minLength:"1" description:"Title of the album."`
+	Artist string  `json:"artist,omitempty" description:"Album author, can be empty for multi-artist compilations."`
+	Price  float64 `json:"price" minimum:"0" description:"Price in USD."`
 }
 
 // Albums slice to seed record album data.
